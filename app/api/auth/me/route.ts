@@ -1,0 +1,1 @@
+import {googleUser,config} from "../../../google-auth";export async function GET(){const c=config();return Response.json({user:await googleUser(),configured:!!(c.id&&c.secret)},{headers:{"Cache-Control":"no-store"}})}
